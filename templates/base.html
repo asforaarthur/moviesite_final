@@ -1,5 +1,4 @@
-
-{% load static %}
+{% load static %} <!-- adicione esta linha -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +12,7 @@
     </title>
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" /> <!-- adicione esta linha -->
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"> <!-- adicione esta linha -->
+
 </head>
 
 <body>
@@ -20,6 +20,8 @@
         <a href="{% url 'index' %}"> <img src="{% static 'logo.svg' %}"> </a> <!-- adicione esta linha -->
         <nav id="navegacao-principal">
             <ul>
+                <li><a href="{% url 'movies:index' %}">Filmes</a></li>
+                <!-- adicione esta linha -->
                 <li><a href="{% url 'about' %}">Sobre</a></li>
             </ul>
         </nav>
